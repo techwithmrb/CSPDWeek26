@@ -15,10 +15,10 @@ model.compile(optimizer='sgd', loss='mean_squared_error')
 model.summary()
 
 
-def trainModel(x_list, y_list, iterations,verbose=0):
+def trainModel(x_list, y_list, iterations):
     x = np.array(x_list, dtype=float)
     y = np.array(y_list, dtype=float)
-    history = model.fit(x, y, epochs=iterations)
+    history = model.fit(x, y, epochs=iterations,verbose = 0)
     print("\nTraining complete!")
 
 def predictModel(x_input):
